@@ -118,10 +118,6 @@ function getCursorPosition(canvas, event) {
         
         var coordX = document.getElementById("coord-x").value
         var coordY = document.getElementById("coord-y").value
-        if(coordX == null && coordY == null){
-            coordX = 512;
-            coordY = 384;
-        }
         var coordxy = [coordX,coordY]
         console.log("Coords set for X: " + coordX + " Y: "+coordY);
         return coordxy;
@@ -147,7 +143,9 @@ function getCursorPosition(canvas, event) {
             drawCircle(size);
         }else if(text == "Pentagono"){
             drawPentagon(size);
-        }
+        }else if(text == "estrella"){
+         drawStar(size);
+     }
     }
     function drawSquare(size){
         var coordxy = getCoords();
@@ -229,6 +227,9 @@ function getCursorPosition(canvas, event) {
         context.stroke();
 
       
+    }
+    function drawStar(size){
+
     }
    
     
