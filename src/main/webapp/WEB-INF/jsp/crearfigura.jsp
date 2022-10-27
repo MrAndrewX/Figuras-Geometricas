@@ -9,9 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Figura</title>
     <link rel="shortcut icon" href="https://solar-energia.net/uploads/cms/geometria/figuras-geometricas-planas.webp?ezimgfmt=rs:350x263/rscb1/ngcb1/notWebP" type="image/x-icon">
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+    *{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+</style>
 
 </head>
+<nav>
+    <a href="/crearfigura">Crear figura</a>
+    <a href="/figuras">Figuras</a>
+</nav>
 <body>
 <h1>Crear figura</h1>
 <p>Bienvenido ${username}, ya puedes crear tu figura</p>
@@ -19,13 +28,13 @@
 </canvas>
 <form action="/crearfigura" method="post">
     <label> Coordenadas:
-    <input type="number" name="coord-x" id="coord-x" placeholder="Coodenada X">
-    <input type="number" name="coord-y" id="coord-y" placeholder="Coodenada Y">
+    <input type="number" name="coord-x" id="coord-x" placeholder="Coodenada X" required>
+    <input type="number" name="coord-y" id="coord-y" placeholder="Coodenada Y" required>
     <input type="button" value="Set" onclick="getCoords()" >
 </label>
 <br>
     <label>Figura: 
-    <select name="figura" id="selectfigure" onChange="getShape()">
+    <select name="figura" id="selectfigure" onChange="getShape()" required>
         <option disabled selected value> -- Selecciona una figura -- </option>
         <option value="circulo">Circulo</option>
         <option value="cuadrado">Cuadrado</option>
@@ -40,11 +49,11 @@
     <label>Nombre de la figura: <input type="text" name="figuraname"></label>
 <br>
 
-    <label>Size: <input type="range" min="10" max="1000" value="10" name="size" id="size" onchange="sizemod()" oninput="sizemod()"></label>
+    <label>Size: <input type="range" min="10" max="1000" value="10" name="size" id="size" onchange="sizemod()" oninput="sizemod()" required></label>
    
     <br>
     <label>Color: 
-    <select name="color" id="color" onchange="getColor()">
+    <select name="color" id="color" onchange="getColor()" required>
         <option disabled selected value> -- Selecciona un color -- </option>
         <option value="black">Negro</option>
         <option value="green">Verde</option>
@@ -62,6 +71,21 @@
 <script>
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
+// Captura coordenadas del cursor
+function getCursorPosition(canvas, event) {
+            const rect = canvas.getBoundingClientRect()
+            const coordx = event.clientX - rect.left
+            const coordy = event.clientY - rect.top
+            document.getElementById("coord-x").value = Math.trunc(coordx);
+            document.getElementById("coord-y").value = Math.trunc(coordy);
+            
+        }
+
+        
+        canvas.addEventListener('mousedown', function(e) {
+        getCursorPosition(canvas, e)
+        });
+
     function sizemod(){
         
         var size = document.getElementById("size").value

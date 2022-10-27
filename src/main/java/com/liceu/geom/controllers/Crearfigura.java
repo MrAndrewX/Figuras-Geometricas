@@ -35,16 +35,21 @@ public class Crearfigura extends HttpServlet {
 
         coords[0] = Integer.parseInt(req.getParameter("coord-x"));
         coords[1] = Integer.parseInt(req.getParameter("coord-y"));
+        if (coords[0] < 0 || coords[1] < 0){
+            resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El tipo de figura no es valido");
+            return;
+        }
 
         String tipofigura = req.getParameter("figura");
         System.out.println(tipofigura);
         if (!(tipofigura.equals("triangulo") || tipofigura.equals("cuadrado") || tipofigura.equals("circulo") || tipofigura.equals("pentagono") ||
-                tipofigura.equals("Estrella"))){
+                tipofigura.equals("estrella"))){
             resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El tipo de figura no es valido");
             return;
         }
+
+
         String nombreFigura = req.getParameter("figuraname");
-        System.out.println("Nombre de figura antes del if:" + nombreFigura);
         if (nombreFigura.isEmpty()){
         nombreFigura = tipofigura +""+ (int) (Math.random()*10000);
         }else{
@@ -52,7 +57,17 @@ public class Crearfigura extends HttpServlet {
         }
 
         int size = Integer.parseInt(req.getParameter("size"));
+        if (size < 0){
+            resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El size no puede ser negatico");
+            return;
+        }
         String color = req.getParameter("color");
+        if (color.isEmpty() || !(color.equals("red") || color.equals("blue")||
+                color.equals("black")|| color.equals("green")||
+                color.equals("yellow")|| color.equals("grey"))){
+            resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El color no es valido");
+            return;
+        }
         String user = (String) req.getSession().getAttribute("username");
 
         System.out.printf("Usuario: %s, Tipo figura: %s, Coords: %d:%d, " +

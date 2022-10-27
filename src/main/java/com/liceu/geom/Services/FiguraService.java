@@ -9,6 +9,7 @@ import java.util.Date;
 
 public class FiguraService {
     FiguraDAO figuraDAO = new FiguraDaoDB();
+    int lastID = 1;
     public void newFigure(String user, String tipofigura, int coordx, int coordy, int size, String color, String nombreFigura) {
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
@@ -22,7 +23,8 @@ public class FiguraService {
         f.setColor(color);
         f.setDateCreacion(formatter.format(date));
         f.setNombreFigura(nombreFigura);
-
+        f.setId(lastID);
         figuraDAO.insert(f);
+        lastID++;
     }
 }

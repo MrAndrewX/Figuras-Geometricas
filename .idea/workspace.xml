@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/FiguraDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/FiguraDaoDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" afterDir="false" />
+    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Figure list hecha, falta implementar usuarios">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VerFigura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/crearfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/usernamefilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/saveuser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/saveuser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +123,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666631870205</updated>
     </task>
+    <task id="LOCAL-00001" summary="Figure list hecha, falta implementar usuarios">
+      <created>1666819833233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666819833233</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,5 +143,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Figure list hecha, falta implementar usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Figure list hecha, falta implementar usuarios" />
   </component>
 </project>
