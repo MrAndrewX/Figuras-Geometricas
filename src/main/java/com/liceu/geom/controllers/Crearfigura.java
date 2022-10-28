@@ -1,6 +1,7 @@
 package com.liceu.geom.controllers;
 
 import com.liceu.geom.Services.FiguraService;
+import com.liceu.geom.model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class Crearfigura extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
-        String user = (String) session.getAttribute("username");
+        User user = (User) session.getAttribute("userobject");
 
 
         RequestDispatcher dispatcher =
@@ -29,7 +30,7 @@ public class Crearfigura extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        HttpSession session = req.getSession();
 
         int[] coords = new int[2];
 
@@ -73,7 +74,7 @@ public class Crearfigura extends HttpServlet {
         System.out.printf("Usuario: %s, Tipo figura: %s, Coords: %d:%d, " +
                 "Tamaño %d, Color: %s, Nombre Figura: %s\n",user,tipofigura,coords[0],coords[1],size,color,nombreFigura);
 
-        figuraService.newFigure(user,tipofigura,coords[0],coords[1],size,color,nombreFigura);
+        figuraService.newFigure(user,tipofigura,coords[0],coords[1],size,color,nombreFigura, (User) session.getAttribute("userobject"));
 
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/crearfigura.jsp");

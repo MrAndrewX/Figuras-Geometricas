@@ -8,7 +8,15 @@ public class Figura {
     String nombreFigura;
     int tamano;
     String color;
+    User user;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public String getDateCreacion() {
         return dateCreacion;
@@ -20,7 +28,6 @@ public class Figura {
 
     String dateCreacion;
 
-    public enum TipFig {CUADRADO, CIRCULO,PENTAGONO,TRIANGULO,ESTRELLA};
 
     public int getId() {
         return id;
@@ -88,6 +95,7 @@ public class Figura {
                 ", nombreFigura='" + nombreFigura + '\'' +
                 ", tamano=" + tamano +
                 ", color='" + color + '\'' +
+                ", user=" + user +
                 ", dateCreacion='" + dateCreacion + '\'' +
                 '}';
     }

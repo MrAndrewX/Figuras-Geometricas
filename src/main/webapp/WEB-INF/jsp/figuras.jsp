@@ -43,6 +43,7 @@ input{
    <table>
     <tr>
         <th>ID</th>
+        <th>User ID</th>
         <th>Nombre de la figura</th>
         <th>Tipo de figura</th>
         <th>Coord-X</th>
@@ -56,6 +57,7 @@ input{
     <c:forEach var="figura" items="${figuras}">
         <tr>
             <td><c:out value="${figura.id}" /></td>
+            <td><c:out value="${figura.getUser().getId()}" /></td>
             <td><c:out value="${figura.nombreFigura}" /></td>
             <td><c:out value="${figura.tipofigura}" /></td>
             <td><c:out value="${figura.x}" /></td>

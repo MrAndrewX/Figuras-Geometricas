@@ -1,6 +1,7 @@
 package com.liceu.geom.controllers;
 
 import com.liceu.geom.DAO.db.FiguraDaoDB;
+import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
 
 import javax.servlet.RequestDispatcher;
@@ -11,23 +12,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-@WebServlet("/figuras")
-public class Mostrarfigura extends HttpServlet {
+@WebServlet("/Misfiguras")
+public class Misfiguras extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
         User user = (User) session.getAttribute("userobject");
-
-        req.setAttribute("figuras",FiguraDaoDB.figuras);
+        List<Figura> misfiguras = new ArrayList<>();
+        for (Figura f : FiguraDaoDB.figuras){
+            if (f.getUser().getId() == user.getId()){
+                misfiguras.add(f);
+            }
+        }
+        req.setAttribute("figuras", misfiguras);
         System.out.println(FiguraDaoDB.figuras);
         req.getParameter("id");
 
-
-
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figuras.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/misfiguras.jsp");
         dispatcher.forward(req,resp);
     }
 
