@@ -22,4 +22,13 @@ public class FiguraDaoDB implements FiguraDAO {
         }
 
     }
+
+    @Override
+    public boolean remove(Figura figura) {
+        figuras.remove(figura);
+        if (figuras.contains(figura)){
+            return false;
+        }
+        return true;
+    }
 }

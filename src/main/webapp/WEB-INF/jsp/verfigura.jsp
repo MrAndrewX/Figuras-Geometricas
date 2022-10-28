@@ -14,6 +14,11 @@
     
     </head>
 <body>
+    <nav>
+        <a href="/crearfigura">Crear figura</a>
+        <a href="/figuras">Figuras</a>
+        <a href="/misfiguras">Figuras</a>
+    </nav>
     <h1>Ver figura</h1>
     <p>Visualizando figura ${nombrefigura}</p>
     <canvas id="myCanvas" width="1024px" height="768px" style="border:1px solid #000000;">

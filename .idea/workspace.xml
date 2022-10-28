@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Figuras ya se visualizan">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/UserDAODB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/User.java" afterDir="false" />
+    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Mis figuras implementado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Borrarfigura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/FiguraDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/FiguraDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/FiguraDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/FiguraDaoDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666912523580</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mis figuras implementado">
+      <created>1666972132013</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666972132013</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +178,7 @@
     <MESSAGE value="Figure list hecha, falta implementar usuarios" />
     <MESSAGE value="podemos visualizar las figuras, la id se transalda entre clases" />
     <MESSAGE value="Figuras ya se visualizan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Figuras ya se visualizan" />
+    <MESSAGE value="Mis figuras implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mis figuras implementado" />
   </component>
 </project>

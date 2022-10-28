@@ -38,6 +38,7 @@ input{
     <nav>
         <a href="/crearfigura">Crear figura</a>
         <a href="/figuras">Figuras</a>
+        <a href="/misfiguras">Figuras</a>
     </nav>
    <h1>Lista de figuras</h1>
    <table>
@@ -71,8 +72,12 @@ input{
                     <input type="hidden" name="idfigura" value="${figura.id}">
                     <input type="submit" value="Ver">
                 </form>
-                
-                <input type="button" value="Borrar">
+                <form action="/borrarfigura" method="post">
+                    <input type="hidden" name="iduser" value="${figura.getUser().getId()}">
+                    <input type="hidden" name="idfigura" value="${figura.id}">
+                    <input type="submit" value="Borrar">
+                </form>
+            
             </td>
         </tr>
     </c:forEach>

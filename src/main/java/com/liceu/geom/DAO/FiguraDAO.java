@@ -4,4 +4,5 @@ import com.liceu.geom.model.Figura;
 
 public interface FiguraDAO {
     boolean insert(Figura figura);
+    boolean remove(Figura figura);
 }

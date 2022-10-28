@@ -20,9 +20,14 @@
 <nav>
     <a href="/crearfigura">Crear figura</a>
     <a href="/figuras">Figuras</a>
+    <a href="/misfiguras">Figuras</a>
 </nav>
 <body>
 <h1>Crear figura</h1>
+<nav>
+    <a href="/crearfigura">Crear figura</a>
+    <a href="/figuras">Figuras</a>
+</nav>
 <p>Bienvenido ${username}, ya puedes crear tu figura</p>
 <canvas id="myCanvas" width="1024px" height="768px" style="border:1px solid #000000;">
 </canvas>

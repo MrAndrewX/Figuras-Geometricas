@@ -29,4 +29,8 @@ public class FiguraService {
         figuraDAO.insert(f);
         lastID++;
     }
+    public void removeFigure(Figura figure){
+        System.out.println("Quitando figura: " + figure.toString());
+        figuraDAO.remove(figure);
+    }
 }
