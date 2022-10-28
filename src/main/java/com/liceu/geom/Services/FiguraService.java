@@ -11,7 +11,7 @@ import java.util.Date;
 public class FiguraService {
     FiguraDAO figuraDAO = new FiguraDaoDB();
     int lastID = 1;
-    public void newFigure(String user, String tipofigura, int coordx, int coordy, int size, String color, String nombreFigura, User userobject) {
+    public void newFigure(String tipofigura, int coordx, int coordy, int size, String color, String nombreFigura, User userobject) {
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
 

@@ -1,6 +1,8 @@
 package com.liceu.geom.controllers;
 
+import com.liceu.geom.DAO.db.FiguraDaoDB;
 import com.liceu.geom.Services.FiguraService;
+import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
 
 import javax.servlet.RequestDispatcher;
@@ -56,10 +58,19 @@ public class Crearfigura extends HttpServlet {
         }else{
             nombreFigura = req.getParameter("figuraname");
         }
+        User user = (User) session.getAttribute("userobject");
+        //check si hay nombre repetido
+        for(Figura f : FiguraDaoDB.figuras){
+
+            if (f.getNombreFigura().equals(nombreFigura) && user.getId() == f.getUser().getId()){
+                resp.sendError(HttpServletResponse.SC_CONFLICT,"Este nombre de figura ya esta en uso");
+                return;
+            }
+        }
 
         int size = Integer.parseInt(req.getParameter("size"));
         if (size < 0){
-            resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El size no puede ser negatico");
+            resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El size no puede ser negativo");
             return;
         }
         String color = req.getParameter("color");
@@ -69,12 +80,12 @@ public class Crearfigura extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El color no es valido");
             return;
         }
-        String user = (String) req.getSession().getAttribute("username");
+
 
         System.out.printf("Usuario: %s, Tipo figura: %s, Coords: %d:%d, " +
                 "Tamaño %d, Color: %s, Nombre Figura: %s\n",user,tipofigura,coords[0],coords[1],size,color,nombreFigura);
 
-        figuraService.newFigure(user,tipofigura,coords[0],coords[1],size,color,nombreFigura, (User) session.getAttribute("userobject"));
+        figuraService.newFigure(tipofigura,coords[0],coords[1],size,color,nombreFigura, (User) session.getAttribute("userobject"));
 
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/crearfigura.jsp");
