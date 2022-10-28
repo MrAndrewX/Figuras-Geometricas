@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Mis figuras implementado">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Borrarfigura.java" afterDir="false" />
+    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Borrar figura implementado, falta redirigir cuando la figura no es tuya">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/FiguraDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/FiguraDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/FiguraDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/db/FiguraDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Borrarfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Borrarfigura.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666972132013</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Borrar figura implementado, falta redirigir cuando la figura no es tuya">
+      <created>1666989192322</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666989192322</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +178,7 @@
     <MESSAGE value="podemos visualizar las figuras, la id se transalda entre clases" />
     <MESSAGE value="Figuras ya se visualizan" />
     <MESSAGE value="Mis figuras implementado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mis figuras implementado" />
+    <MESSAGE value="Borrar figura implementado, falta redirigir cuando la figura no es tuya" />
+    <option name="LAST_COMMIT_MESSAGE" value="Borrar figura implementado, falta redirigir cuando la figura no es tuya" />
   </component>
 </project>

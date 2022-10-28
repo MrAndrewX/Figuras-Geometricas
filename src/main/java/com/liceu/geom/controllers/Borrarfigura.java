@@ -12,35 +12,37 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
 
 @WebServlet("/borrarfigura")
 public class Borrarfigura extends HttpServlet {
+
     FiguraService figuraService = new FiguraService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        PrintWriter pw = resp.getWriter();
+        pw.print("No has seleccionado ninguna figura");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        PrintWriter pw = resp.getWriter();
         User user = (User) req.getSession().getAttribute("userobject");
         if (user.getId() == Integer.parseInt(req.getParameter("iduser"))){
             int idfigura = Integer.parseInt(req.getParameter("idfigura"));
+
             for (Figura f : FiguraDaoDB.figuras){
                 if (f.getId() == idfigura){
                     figuraService.removeFigure(f);
-                    RequestDispatcher dispatcher =
-                            req.getRequestDispatcher("/WEB-INF/jsp/borrarfigura.jsp");
-                    dispatcher.forward(req,resp);
-                }else{
-                    RequestDispatcher dispatcher =
-                            req.getRequestDispatcher("/WEB-INF/jsp/borrarfiguraerror.jsp");
-                    dispatcher.forward(req,resp);
+                    pw.print("Figura borrada correctamente");
+                    return;
                 }
             }
-        }
 
+        }else {
+            pw.print("No puedes borrar una figura que no es tuya");
+        }
 
 
     }
