@@ -1,6 +1,7 @@
 package com.liceu.geom.controllers;
 
 import com.liceu.geom.DAO.db.FiguraDaoDB;
+import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
 
 import javax.servlet.RequestDispatcher;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/figuras")
 public class Mostrarfigura extends HttpServlet {
@@ -19,10 +22,11 @@ public class Mostrarfigura extends HttpServlet {
 
         HttpSession session = req.getSession();
         User user = (User) session.getAttribute("userobject");
-
-        req.setAttribute("figuras",FiguraDaoDB.figuras);
-        System.out.println(FiguraDaoDB.figuras);
-        req.getParameter("id");
+        if (req.getParameter("figurabuscada") == null) {
+            req.setAttribute("figuras", FiguraDaoDB.figuras);
+            System.out.println(FiguraDaoDB.figuras);
+            req.getParameter("id");
+        }
 
 
 
@@ -33,6 +37,17 @@ public class Mostrarfigura extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        List<Figura> figurasencotradas = new ArrayList<>();
+        for (Figura f : FiguraDaoDB.figuras){
+            if (f.getNombreFigura().contains(req.getParameter("figurabuscada"))){
+                figurasencotradas.add(f);
+            }
+        }
+        req.setAttribute("figuras", figurasencotradas);
+
+        req.getParameter("id");
+        RequestDispatcher dispatcher =
+                req.getRequestDispatcher("/WEB-INF/jsp/figuras.jsp");
+        dispatcher.forward(req,resp);
     }
 }

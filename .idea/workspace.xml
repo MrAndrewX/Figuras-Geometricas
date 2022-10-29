@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Nombre de figuras iguales, pero si el mismo nombre en diferentes usuarios">
+    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="diseño añadido">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/Usernamefilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/crearfigura.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Mostrarfigura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figuras.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/misfiguras.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/misfiguras.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verfigura.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666994202491</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="diseño añadido">
+      <created>1667002154517</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667002154517</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,17 +211,7 @@
     <MESSAGE value="Borrar figura implementado, falta redirigir cuando la figura no es tuya" />
     <MESSAGE value="Borrar figura implementado." />
     <MESSAGE value="Nombre de figuras iguales, pero si el mismo nombre en diferentes usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nombre de figuras iguales, pero si el mismo nombre en diferentes usuarios" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/UserService.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="diseño añadido" />
+    <option name="LAST_COMMIT_MESSAGE" value="diseño añadido" />
   </component>
 </project>

@@ -35,6 +35,9 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
 input{
     margin: 5px;
 }
