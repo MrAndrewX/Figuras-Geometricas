@@ -19,7 +19,7 @@ public class Usernamefilter extends HttpFilter {
         User user = (User) session.getAttribute("userobject");
         if (user == null){
             res.setStatus(401);
-            res.sendError(HttpServletResponse.SC_FORBIDDEN,"Acceso no authorizado, no se ha guardado el usuario");
+            res.sendRedirect("/login");
             return;
         }
         chain.doFilter(req,res);
