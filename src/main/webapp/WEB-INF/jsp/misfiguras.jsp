@@ -62,6 +62,10 @@ input{
                     </li>
                    
                 </ul>
+                <form class="d-flex justify-content-between bd-highlight mb-2" action="/figuras" method="post">
+                    <input class="form-control me-2" type="search" placeholder="Nombre de la figura" aria-label="Search" name="figurabuscada">
+                    <button class="btn btn-outline-success" type="submit">buscar</button>
+                  </form>
             </div>
         </div>
     </nav>

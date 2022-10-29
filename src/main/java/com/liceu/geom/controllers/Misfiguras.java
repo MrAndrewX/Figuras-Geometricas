@@ -39,6 +39,17 @@ public class Misfiguras extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        List<Figura> figurasencotradas = new ArrayList<>();
+        for (Figura f : FiguraDaoDB.figuras){
+            if (f.getNombreFigura().contains(req.getParameter("figurabuscada"))){
+                figurasencotradas.add(f);
+            }
+        }
+        req.setAttribute("figuras", figurasencotradas);
+
+        req.getParameter("id");
+        RequestDispatcher dispatcher =
+                req.getRequestDispatcher("/WEB-INF/jsp/figuras.jsp");
+        dispatcher.forward(req,resp);
     }
 }
