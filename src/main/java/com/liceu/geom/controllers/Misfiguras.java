@@ -49,7 +49,7 @@ public class Misfiguras extends HttpServlet {
 
         req.getParameter("id");
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figuras.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/misfiguras.jsp");
         dispatcher.forward(req,resp);
     }
 }
