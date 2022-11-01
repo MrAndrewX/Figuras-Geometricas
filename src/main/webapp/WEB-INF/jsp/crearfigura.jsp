@@ -175,8 +175,9 @@ function getCursorPosition(canvas, event) {
             drawCircle(size);
         }else if(text == "Pentagono"){
             drawPentagon(size);
-        }else if(text == "estrella"){
-         drawStar(size);
+        }else if(text == "Estrella"){
+        
+            drawStar(size);
      }
     }
     function drawSquare(size){
@@ -261,8 +262,29 @@ function getCursorPosition(canvas, event) {
       
     }
     function drawStar(size){
+        
+    // define the star
+    var coordxy = getCoords();
+        let coordx = Number(coordxy[0]);
+        let coordy = Number(coordxy[1]);
+        clearCanvas();
+        console.log("In star" + coordx +" "+ coordy)
 
-    }
+
+    context.beginPath();
+    context.moveTo(coordx, coordy+size);
+    for (var i=0; i < 2*7+1; i++) {
+        var r = (i%2 == 0)? size : size/2;
+        var a = Math.PI * i/7;
+        context.lineTo(coordx + r*Math.sin(a), coordy + r*Math.cos(a));
+    };
+    context.closePath();
+    // draw
+    context.fillStyle=String(getColor());
+    context.fill();
+    context.stroke()
+}
+    
    
     
 
