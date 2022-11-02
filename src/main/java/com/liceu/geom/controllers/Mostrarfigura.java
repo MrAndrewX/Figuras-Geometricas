@@ -1,6 +1,7 @@
 package com.liceu.geom.controllers;
 
 import com.liceu.geom.DAO.db.FiguraDaoDB;
+import com.liceu.geom.Services.FiguraService;
 import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
 
@@ -17,14 +18,15 @@ import java.util.List;
 
 @WebServlet("/figuras")
 public class Mostrarfigura extends HttpServlet {
+    FiguraService figuraService = new FiguraService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
         User user = (User) session.getAttribute("userobject");
         if (req.getParameter("figurabuscada") == null) {
-            req.setAttribute("figuras", FiguraDaoDB.figuras);
-            System.out.println(FiguraDaoDB.figuras);
+            req.setAttribute("figuras", figuraService.getListFigures());
+            System.out.println(figuraService.getListFigures());
             req.getParameter("id");
         }
 
@@ -38,7 +40,7 @@ public class Mostrarfigura extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Figura> figurasencotradas = new ArrayList<>();
-        for (Figura f : FiguraDaoDB.figuras){
+        for (Figura f : figuraService.getListFigures()){
             if (f.getNombreFigura().contains(req.getParameter("figurabuscada"))){
                 figurasencotradas.add(f);
             }

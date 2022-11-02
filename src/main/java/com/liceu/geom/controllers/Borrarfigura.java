@@ -1,6 +1,6 @@
 package com.liceu.geom.controllers;
 
-import com.liceu.geom.DAO.db.FiguraDaoDB;
+
 import com.liceu.geom.Services.FiguraService;
 import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
@@ -32,7 +32,7 @@ public class Borrarfigura extends HttpServlet {
         if (user.getId() == Integer.parseInt(req.getParameter("iduser"))){
             int idfigura = Integer.parseInt(req.getParameter("idfigura"));
 
-            for (Figura f : FiguraDaoDB.figuras){
+            for (Figura f : figuraService.getListFigures()){
                 if (f.getId() == idfigura){
                     figuraService.removeFigure(f);
                     pw.print("Figura borrada correctamente");

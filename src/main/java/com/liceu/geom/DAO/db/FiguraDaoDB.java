@@ -3,7 +3,6 @@ package com.liceu.geom.DAO.db;
 import com.liceu.geom.DAO.FiguraDAO;
 import com.liceu.geom.model.Figura;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,4 +30,10 @@ public class FiguraDaoDB implements FiguraDAO {
         }
         return true;
     }
+
+    @Override
+    public List<Figura> getFigureList() {
+        return figuras;
+    }
+
 }

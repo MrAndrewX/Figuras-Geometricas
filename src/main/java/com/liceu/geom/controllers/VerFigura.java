@@ -1,5 +1,7 @@
 package com.liceu.geom.controllers;
 
+
+import com.liceu.geom.Services.FiguraService;
 import com.liceu.geom.model.Figura;
 
 import javax.servlet.RequestDispatcher;
@@ -13,10 +15,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 
-import static com.liceu.geom.DAO.db.FiguraDaoDB.figuras;
+
 
 @WebServlet("/verfigura")
 public class VerFigura extends HttpServlet {
+    FiguraService figuraService = new FiguraService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter pw = resp.getWriter();
@@ -29,7 +32,7 @@ public class VerFigura extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("idfigura"));
         req.setAttribute("id",id);
         Figura f = new Figura();
-        for(Figura figura : figuras){
+        for(Figura figura : figuraService.getListFigures()){
             if (figura.getId() == id){
                 f = figura;
             }

@@ -1,6 +1,6 @@
 package com.liceu.geom.controllers;
 
-import com.liceu.geom.DAO.db.FiguraDaoDB;
+
 import com.liceu.geom.Services.FiguraService;
 import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
@@ -60,7 +60,7 @@ public class Crearfigura extends HttpServlet {
         }
         User user = (User) session.getAttribute("userobject");
         //check si hay nombre repetido
-        for(Figura f : FiguraDaoDB.figuras){
+        for(Figura f : figuraService.getListFigures()){
 
             if (f.getNombreFigura().equals(nombreFigura) && user.getId() == f.getUser().getId()){
                 resp.sendError(HttpServletResponse.SC_CONFLICT,"Este nombre de figura ya esta en uso");

@@ -7,6 +7,7 @@ import com.liceu.geom.model.User;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class FiguraService {
     FiguraDAO figuraDAO = new FiguraDaoDB();
@@ -32,5 +33,8 @@ public class FiguraService {
     public void removeFigure(Figura figure){
         System.out.println("Quitando figura: " + figure.toString());
         figuraDAO.remove(figure);
+    }
+    public List<Figura> getListFigures(){
+        return figuraDAO.getFigureList();
     }
 }

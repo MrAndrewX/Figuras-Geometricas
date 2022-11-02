@@ -93,7 +93,9 @@
     </select>
     <label>Size: <input type="range" min="10" max="1000" value="10" name="size" id="size" onchange="sizemod()" oninput="sizemod()" required></label>
 </label>
+<input type="button" value="Visualiza" onclick="visualiza()">
 <input type="submit" value="Crea!">
+
 
 
 </form>
@@ -125,6 +127,10 @@ function getCursorPosition(canvas, event) {
         
         getShape(size);
     
+    }
+    function visualiza(){
+        var size = document.getElementById("size").value
+        getShape(size);
     }
     function getColor(){
         
