@@ -44,9 +44,17 @@ public class Login extends HttpServlet {
 
             HttpSession session = req.getSession();
 
-            userService.newUser(username);
 
+            for (User user : UserDAODB.userList){
+                if (user.getName().equals(username)){
+                    //Nombre de usuario ya en uso
+                    resp.sendError(HttpServletResponse.SC_CONFLICT,"Nombre de usuario ya en uso");
+                    return;
+                }
+            }
+            userService.newUser(username);
             session.setAttribute("userobject",userService.getUserByName(username));
+
             System.out.println(userService.getUserByName(username));
             System.out.println("Lista de usuarios" + UserDAODB.userList);
             resp.sendRedirect("/crearfigura");

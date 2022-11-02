@@ -69,7 +69,7 @@ input{
             </div>
         </div>
     </nav>
-   <h1>Lista de figuras</h1>
+   <h1 class="text-center">Lista de figuras</h1>
    <table>
     <tr>
         <th>ID</th>

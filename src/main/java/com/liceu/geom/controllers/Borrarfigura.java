@@ -36,12 +36,19 @@ public class Borrarfigura extends HttpServlet {
                 if (f.getId() == idfigura){
                     figuraService.removeFigure(f);
                     pw.print("Figura borrada correctamente");
+                    RequestDispatcher dispatcher =
+                            req.getRequestDispatcher("/WEB-INF/jsp/borrarfigura.jsp");
+                    dispatcher.forward(req,resp);
                     return;
                 }
             }
 
         }else {
             pw.print("No puedes borrar una figura que no es tuya");
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("/WEB-INF/jsp/borrarfiguraerror.jsp");
+            dispatcher.forward(req,resp);
+            return;
         }
 
 
