@@ -1,7 +1,6 @@
 package com.liceu.geom.controllers;
 
-import com.liceu.geom.DAO.db.FiguraDaoDB;
-import com.liceu.geom.DAO.db.UserDAODB;
+
 import com.liceu.geom.Services.UserService;
 import com.liceu.geom.model.User;
 
@@ -45,7 +44,7 @@ public class Login extends HttpServlet {
             HttpSession session = req.getSession();
 
 
-            for (User user : UserDAODB.userList){
+            for (User user : userService.getListFigures()){
                 if (user.getName().equals(username)){
                     //Nombre de usuario ya en uso
                     resp.sendError(HttpServletResponse.SC_CONFLICT,"Nombre de usuario ya en uso");
@@ -56,7 +55,7 @@ public class Login extends HttpServlet {
             session.setAttribute("userobject",userService.getUserByName(username));
 
             System.out.println(userService.getUserByName(username));
-            System.out.println("Lista de usuarios" + UserDAODB.userList);
+            System.out.println("Lista de usuarios" + userService.getListFigures());
             resp.sendRedirect("/crearfigura");
 
             return;

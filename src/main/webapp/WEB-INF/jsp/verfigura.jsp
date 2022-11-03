@@ -187,7 +187,7 @@
         };
         context.closePath();
         // draw
-        context.fillStyle=String(getColor());
+        context.fillStyle=String(document.getElementById("color").value);
         context.fill();
         context.stroke()
     }

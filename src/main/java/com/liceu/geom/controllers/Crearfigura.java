@@ -44,7 +44,7 @@ public class Crearfigura extends HttpServlet {
         }
 
         String tipofigura = req.getParameter("figura");
-        System.out.println(tipofigura);
+
         if (!(tipofigura.equals("triangulo") || tipofigura.equals("cuadrado") || tipofigura.equals("circulo") || tipofigura.equals("pentagono") ||
                 tipofigura.equals("estrella"))){
             resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El tipo de figura no es valido");

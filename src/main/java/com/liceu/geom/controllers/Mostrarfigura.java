@@ -1,6 +1,6 @@
 package com.liceu.geom.controllers;
 
-import com.liceu.geom.DAO.db.FiguraDaoDB;
+
 import com.liceu.geom.Services.FiguraService;
 import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.User;
@@ -26,7 +26,7 @@ public class Mostrarfigura extends HttpServlet {
         User user = (User) session.getAttribute("userobject");
         if (req.getParameter("figurabuscada") == null) {
             req.setAttribute("figuras", figuraService.getListFigures());
-            System.out.println(figuraService.getListFigures());
+
             req.getParameter("id");
         }
 

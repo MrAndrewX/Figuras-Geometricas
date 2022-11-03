@@ -4,6 +4,8 @@ import com.liceu.geom.DAO.UserDAO;
 import com.liceu.geom.DAO.db.UserDAODB;
 import com.liceu.geom.model.User;
 
+import java.util.List;
+
 public class UserService {
 
 
@@ -30,5 +32,8 @@ public class UserService {
             }
         }
         return user;
+    }
+    public List<User> getListFigures(){
+        return userDAO.getUserList();
     }
 }

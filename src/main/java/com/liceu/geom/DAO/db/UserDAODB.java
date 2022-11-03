@@ -16,4 +16,9 @@ public class UserDAODB implements UserDAO {
         userList.add(user);
         return true;
     }
+
+    @Override
+    public List<User> getUserList() {
+        return userList;
+    }
 }

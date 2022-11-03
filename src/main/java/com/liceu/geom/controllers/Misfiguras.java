@@ -31,7 +31,6 @@ public class Misfiguras extends HttpServlet {
             }
         }
         req.setAttribute("figuras", misfiguras);
-        System.out.println(FiguraDaoDB.figuras);
         req.getParameter("id");
 
         RequestDispatcher dispatcher =
