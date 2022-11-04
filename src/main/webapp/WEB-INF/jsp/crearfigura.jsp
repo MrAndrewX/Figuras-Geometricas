@@ -118,6 +118,7 @@ function getCursorPosition(canvas, event) {
         
         canvas.addEventListener('mousedown', function(e) {
         getCursorPosition(canvas, e)
+        sizemod();
         });
 
     function sizemod(){
