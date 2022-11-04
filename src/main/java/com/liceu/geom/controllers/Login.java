@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
             HttpSession session = req.getSession();
 
 
-            for (User user : userService.getListFigures()){
+            for (User user : userService.getListUsers()){
                 if (user.getName().equals(username)){
                     //Nombre de usuario ya en uso
                     resp.sendError(HttpServletResponse.SC_CONFLICT,"Nombre de usuario ya en uso");
@@ -55,7 +55,7 @@ public class Login extends HttpServlet {
             session.setAttribute("userobject",userService.getUserByName(username));
 
             System.out.println(userService.getUserByName(username));
-            System.out.println("Lista de usuarios" + userService.getListFigures());
+            System.out.println("Lista de usuarios" + userService.getListUsers());
             resp.sendRedirect("/crearfigura");
 
             return;

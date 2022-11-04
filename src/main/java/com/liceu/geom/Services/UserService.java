@@ -7,9 +7,6 @@ import com.liceu.geom.model.User;
 import java.util.List;
 
 public class UserService {
-
-
-
     UserDAO userDAO = new UserDAODB();
     int lastID = 1;
     public void newUser(String name){
@@ -33,7 +30,7 @@ public class UserService {
         }
         return user;
     }
-    public List<User> getListFigures(){
+    public List<User> getListUsers(){
         return userDAO.getUserList();
     }
 }
