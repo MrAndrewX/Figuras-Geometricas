@@ -20,7 +20,7 @@
 
 </head>
 
-<body style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/622/large_2x/pink-and-blue-geometric-polygonal-background-vector.jpg);"></body>
+<body style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/622/large_2x/pink-and-blue-geometric-polygonal-background-vector.jpg);">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">

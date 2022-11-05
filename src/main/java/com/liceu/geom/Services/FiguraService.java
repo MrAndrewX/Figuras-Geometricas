@@ -31,7 +31,7 @@ public class FiguraService {
         lastID++;
     }
     public void removeFigure(Figura figure){
-        System.out.println("Quitando figura: " + figure.toString());
+
         figuraDAO.remove(figure);
     }
     public List<Figura> getListFigures(){

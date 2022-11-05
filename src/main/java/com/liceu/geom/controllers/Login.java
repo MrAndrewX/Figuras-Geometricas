@@ -54,8 +54,7 @@ public class Login extends HttpServlet {
             userService.newUser(username);
             session.setAttribute("userobject",userService.getUserByName(username));
 
-            System.out.println(userService.getUserByName(username));
-            System.out.println("Lista de usuarios" + userService.getListUsers());
+
             resp.sendRedirect("/crearfigura");
 
             return;

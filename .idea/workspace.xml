@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="Lista idependizada de dao">
+    <list default="true" id="9677b3db-fc5a-4698-92fa-ea3a41d6cffe" name="Changes" comment="metodo refactorizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/Services/FiguraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Crearfigura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Misfiguras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/borrarfigura.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/borrarfigura.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667544114706</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="metodo refactorizado">
+      <created>1667561031652</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667561031652</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +282,7 @@
     <MESSAGE value="Crear estrella canvas implementado" />
     <MESSAGE value="No pued ehaber 2 usuarios repetidos implementado" />
     <MESSAGE value="Lista idependizada de dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lista idependizada de dao" />
+    <MESSAGE value="metodo refactorizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="metodo refactorizado" />
   </component>
 </project>

@@ -41,7 +41,7 @@ public class Crearfigura extends HttpServlet {
         if (coords[0] < 0 || coords[1] < 0){
             resp.sendError(HttpServletResponse.SC_EXPECTATION_FAILED,"El tipo de figura no es valido");
             return;
-        }
+        }req.getParameter("figura");
 
         String tipofigura = req.getParameter("figura");
 
@@ -82,8 +82,6 @@ public class Crearfigura extends HttpServlet {
         }
 
 
-        System.out.printf("Usuario: %s, Tipo figura: %s, Coords: %d:%d, " +
-                "Tamaño %d, Color: %s, Nombre Figura: %s\n",user,tipofigura,coords[0],coords[1],size,color,nombreFigura);
 
         figuraService.newFigure(tipofigura,coords[0],coords[1],size,color,nombreFigura, (User) session.getAttribute("userobject"));
 

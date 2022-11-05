@@ -25,7 +25,7 @@ public class Misfiguras extends HttpServlet {
         HttpSession session = req.getSession();
         User user = (User) session.getAttribute("userobject");
         List<Figura> misfiguras = new ArrayList<>();
-        for (Figura f : FiguraDaoDB.figuras){
+        for (Figura f : figuraService.getListFigures()){
             if (f.getUser().getId() == user.getId()){
                 misfiguras.add(f);
             }
